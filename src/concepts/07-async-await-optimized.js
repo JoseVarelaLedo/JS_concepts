@@ -49,3 +49,4 @@ const fastPromise = () => new Promise(
         }, 1000)
     }
 );
+

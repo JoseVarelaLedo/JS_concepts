@@ -23,7 +23,13 @@ export const promiseComponent = (element) => {
     const id1 = '5d86371f2343e37870b91ef1';
     const id2 = '5d86371f9f80b591f499df32';
     
-    let hero1;
+    let hero1, hero2;
+    const renderTwoHeroes = (hero1, hero2) => {
+        element.innerHTML = `
+            <h3>${ hero1.name }</h3>
+            <h3>${ hero2.name }</h3>
+        `;
+    }
 
     //!forma 3 y definitiva -> Promise.All
 
@@ -35,7 +41,7 @@ export const promiseComponent = (element) => {
     //]).then ((arrayHeroes) => arrayHeroes.forEach (heroe => renderHero(heroe)))
     .catch (renderError);
 
-
+    
         //!forma2
     // findHero (id1)
     //     .then (hero =>{

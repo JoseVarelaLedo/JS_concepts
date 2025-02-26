@@ -11,7 +11,7 @@ export const asyncComponent = (element) => {
    console.log ('Inicio de componente');
 
    findHero( id1 )
-   .then( name => element.innerHTML = name)
+   .then( ({name}) => element.innerHTML = name)
    .catch (error=> element.innerHTML = error)
 
    console.log ('Fin de componente');
